@@ -1,7 +1,7 @@
 <template>
     <div class="slds-card">
-        <template if:true={markers.length}>
-            <lightning-map
+        <template if:true={markers.length}
+            ><lightning-map
                 map-markers={markers}
                 zoom-level={zoomLevel}
             ></lightning-map>

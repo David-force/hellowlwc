@@ -3,18 +3,19 @@
 [![CircleCI](https://circleci.com/gh/trailheadapps-jp/ebikes-lwc-jp.svg?style=svg)](https://circleci.com/gh/trailheadapps-jp/ebikes-lwc-jp)
 
 ## This is Localized Repository. Original is here.
+
 https://github.com/trailheadapps/ebikes-lwc
 
 ![ebikes-logo](ebikes-logo.png)
 
-E-BikesはLightning Web Componentsを使ってどの様にアプリケーションを開発するかを表したサンプルのアプリケーションです。E-Bikesか架空の自転車メーカーで、このアプリケーションはリッチーなユーザ体験を提供し、自社の製品及びリセラーの注文を管理するのに役立ちます。
+E-Bikes は Lightning Web Components を使ってどの様にアプリケーションを開発するかを表したサンプルのアプリケーションです。E-Bikes か架空の自転車メーカーで、このアプリケーションはリッチーなユーザ体験を提供し、自社の製品及びリセラーの注文を管理するのに役立ちます。
 
 ## 目次
 
 -   インストール手順
 
-    -   [スクラッチ組織を使ってE-Bikesをインストール](#スクラッチ組織を使ったE-Bikesのインストール)
-    -   [ロック解除済みパッケージを使ってE-Bikesをインストール](#ロック解除済みパッケージを使ったE-Bikesのインストール)
+    -   [スクラッチ組織を使って E-Bikes をインストール](#スクラッチ組織を使ったE-Bikesのインストール)
+    -   [ロック解除済みパッケージを使って E-Bikes をインストール](#ロック解除済みパッケージを使ったE-Bikesのインストール)
 
 -   [追加のインストール手順](#追加のインストール手順)
 
@@ -22,21 +23,21 @@ E-BikesはLightning Web Componentsを使ってどの様にアプリケーショ�
 
 ## インストール手順
 
-E-Bikesのインストールには2種類の方法があります:
+E-Bikes のインストールには 2 種類の方法があります:
 
 -   [スクラッチ組織の利用](#スクラッチ組織を使ったE-Bikesのインストール): おすすめのインストールオプションです。アプリ及びコードを体験したい開発者はこのオプションを使用して下さい。
 -   [ロック解除済みパッケージの利用](#ロック解除済みパッケージを使ったE-Bikesのインストール): このオプションはサンプルアプリケーションをローカルの開発環境を使わずに、誰でも体験することができます。
 
-## スクラッチ組織を使ったE-Bikesのインストール
+## スクラッチ組織を使った E-Bikes のインストール
 
-1. [クイックスタート: Lightning Web Components](https://trailhead.salesforce.com/ja/content/learn/projects/quick-start-lightning-web-components) Trailheadプロジェクトに従って、環境をセットアップします。このステップには以下が含まれます:
+1. [クイックスタート: Lightning Web Components](https://trailhead.salesforce.com/ja/content/learn/projects/quick-start-lightning-web-components) Trailhead プロジェクトに従って、環境をセットアップします。このステップには以下が含まれます:
 
--   Trailhead PlaygroundでのDev Hubの有効化 
--   Salesforce CLIのインストール
--   Visual Studio Codeのインストール
--   Visual Studio Code Salesforce extensionsのインストール(Lightning Web Components extension を含む)
+-   Trailhead Playground での Dev Hub の有効化
+-   Salesforce CLI のインストール
+-   Visual Studio Code のインストール
+-   Visual Studio Code Salesforce extensions のインストール(Lightning Web Components extension を含む)
 
-2. まだ実施していない場合には, Hub組織への認証とエイリアスを設定します(以下のコマンドでは **myhuborg**):
+2. まだ実施していない場合には, Hub 組織への認証とエイリアスを設定します(以下のコマンドでは **myhuborg**):
 
 ```
 sfdx force:auth:web:login -d -a myhuborg
@@ -83,13 +84,13 @@ sfdx force:org:open
 
 10. アプリケーションランチャーから**E-Bikes**アプリケーションを選択します。
 
-## ロック解除済みパッケージを使ったE-Bikesのインストール
+## ロック解除済みパッケージを使った E-Bikes のインストール
 
-1. [サインアップ](https://developer.salesforce.com/signup) からDeveloper Edition (DE) 組織を取得します。
+1. [サインアップ](https://developer.salesforce.com/signup) から Developer Edition (DE) 組織を取得します。
 
-2. 私のドメインをDE組織で有効化します。手順については[こちら](https://trailhead.salesforce.com/ja/content/learn/modules/identity_login/identity_login_my_domain)を参考にして下さい。
+2. 私のドメインを DE 組織で有効化します。手順については[こちら](https://trailhead.salesforce.com/ja/content/learn/modules/identity_login/identity_login_my_domain)を参考にして下さい。
 
-3. [このリンク](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB0000000KAfOIAW)をクリックしてE-Bikesのロック解除済みパッケージをDE組織にインストールします。
+3. [このリンク](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB0000000KAfOIAW)をクリックして E-Bikes のロック解除済みパッケージを DE 組織にインストールします。
 
 4. **すべてのユーザにインストール**を選択します。
 
@@ -125,35 +126,33 @@ sfdx force:org:open
 
 9. アプリケーションランチャーから**E-Bikes**アプリケーションを選択します。
 
-
 ## 追加のインストール手順
 
-このリポジトリトリには、モダンなWeb開発ツールをSalesforce開発のプロセスに統合したり、継続的インテグレーション及び継続的デプロイメントプロセスを実施するのに役立ついくつかのファイルが含まれています。
+このリポジトリトリには、モダンな Web 開発ツールを Salesforce 開発のプロセスに統合したり、継続的インテグレーション及び継続的デプロイメントプロセスを実施するのに役立ついくつかのファイルが含まれています。
 
 ### コードフォーマット
 
-[Prettier](https://prettier.io/) はコードベースを横断して統一したフォーマットを保証するコードフォーマッタです。PrettierをVisual Studio Codeと一緒に使うには[このextension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)をVisual Studio Code Marketplaceからインストールします。リポジトリの一部として提供されている [.prettierignore](/.prettierignore) と [.prettierrc](/.prettierrc) ファイルがPrettierフォーマッタの挙動をコントロールします。
+[Prettier](https://prettier.io/) はコードベースを横断して統一したフォーマットを保証するコードフォーマッタです。Prettier を Visual Studio Code と一緒に使うには[この extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)を Visual Studio Code Marketplace からインストールします。リポジトリの一部として提供されている [.prettierignore](/.prettierignore) と [.prettierrc](/.prettierrc) ファイルが Prettier フォーマッタの挙動をコントロールします。
 
-### コードのlint
+### コードの lint
 
-[ESLint](https://eslint.org/) は構文エラーや誤った構成要素を見つける一般的なJavaScriptのlintツールです。ESLintをVisual Studio Codeと一緒に使うには[このextension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc)をVisual Studio Code Marketplaceからインストールします。 リポジトリの一部として提供されている [.eslintignore](/.eslintignore) ファイルで、Lighning Web Components開発において不必要なファイルへのlintプロセスを除外します。
+[ESLint](https://eslint.org/) は構文エラーや誤った構成要素を見つける一般的な JavaScript の lint ツールです。ESLint を Visual Studio Code と一緒に使うには[この extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc)を Visual Studio Code Marketplace からインストールします。 リポジトリの一部として提供されている [.eslintignore](/.eslintignore) ファイルで、Lighning Web Components 開発において不必要なファイルへの lint プロセスを除外します。
 
 ### Pre-commit hook
 
-リポジトリには`git commit` による変更のたびに、pre-commit hookによってPrettierおよびESLintを動作させコードフォーマット及びlintを行うための [package.json](./package.json) ファイルが含まれています。
+リポジトリには`git commit` による変更のたびに、pre-commit hook によって Prettier および ESLint を動作させコードフォーマット及び lint を行うための [package.json](./package.json) ファイルが含まれています。
 
-フォーマット及びlintをpre-commit hookで動作させる設定を行います:
+フォーマット及び lint を pre-commit hook で動作させる設定を行います:
 
 1. まだ実施していない場合には[Node.js](https://nodejs.org)をインストールします。
-2. `npm install` をプロジェクトルートフォルダで実行し、ESLint及びPrettierモジュールをインストールします (注意: MacユーザはXcode command line toolsがインストールされていることをこのコマンドの実行前に確認してください)。
+2. `npm install` をプロジェクトルートフォルダで実行し、ESLint 及び Prettier モジュールをインストールします (注意: Mac ユーザは Xcode command line tools がインストールされていることをこのコマンドの実行前に確認してください)。
 
-Prettier及びESLintは自動的にcommitによる変更を行うたびに実行されます.lintエラーが検出された場合にcommitは失敗します.また以下のコマンドでフォーマット及びlintをコマンドラインから実行できます ([package.json](./package.json)で完全なリストを確認できます):
+Prettier 及び ESLint は自動的に commit による変更を行うたびに実行されます.lint エラーが検出された場合に commit は失敗します.また以下のコマンドでフォーマット及び lint をコマンドラインから実行できます ([package.json](./package.json)で完全なリストを確認できます):
 
 ```
 npm run lint:lwc
 npm run prettier
 ```
-
 
 ## アプリケーションの説明
 

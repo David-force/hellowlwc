@@ -58,9 +58,9 @@ describe('c-product-tile-list', () => {
                     mockGetProducts.totalItemCount / mockGetProducts.pageSize
                 );
                 const regex = new RegExp(
-                    `${mockGetProducts.totalItemCount} items(.*)page ${
+                    `${mockGetProducts.totalItemCount} 件(.*)ページ ${
                         mockGetProducts.pageNumber
-                    } of ${totalPages}`
+                    } / ${totalPages}`
                 );
                 expect(paginator.shadowRoot.textContent).toMatch(regex);
             });
@@ -92,7 +92,7 @@ describe('c-product-tile-list', () => {
                     const currentPage =
                         parseInt(mockGetProducts.pageNumber, 10) + 1;
                     const regex = new RegExp(
-                        `page ${currentPage} of ${totalPages}$`
+                        `ページ ${currentPage} / ${totalPages}$`
                     );
                     expect(paginator.shadowRoot.textContent).toMatch(regex);
 
@@ -104,7 +104,9 @@ describe('c-product-tile-list', () => {
                     );
                     // we're back to the original page number now
                     const regex = new RegExp(
-                        `page ${mockGetProducts.pageNumber} of ${totalPages}$`
+                        `(.*)ページ ${
+                            mockGetProducts.pageNumber
+                        } / ${totalPages}$`
                     );
                     expect(paginator.shadowRoot.textContent).toMatch(regex);
                 });
@@ -186,8 +188,7 @@ describe('c-product-tile-list', () => {
         });
 
         it('renders placeholder with no products message', () => {
-            const expected =
-                'There are no products matching your current selection';
+            const expected = '現在の条件に合致する製品はありませんでした';
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList
             });

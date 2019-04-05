@@ -17,6 +17,7 @@ import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
 import MSRP_FIELD from '@salesforce/schema/Product__c.MSRP__c';
 import PICTURE_URL_FIELD from '@salesforce/schema/Product__c.Picture_URL__c';
 import FRONT_BRAKES_FIELD from '@salesforce/schema/Product__c.Front_Brakes__c';
+import REAR_BRAKES_FIELD from '@salesforce/schema/Product__c.Rear_Brakes__c';
 
 /** Record fields to load. */
 const fields = [
@@ -26,7 +27,8 @@ const fields = [
     MATERIAL_FIELD,
     MSRP_FIELD,
     PICTURE_URL_FIELD,
-    FRONT_BRAKES_FIELD
+    FRONT_BRAKES_FIELD,
+    REAR_BRAKES_FIELD
 ];
 
 /**
