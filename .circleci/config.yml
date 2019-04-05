@@ -30,7 +30,7 @@ jobs:
             - run:
                   name: Verify Prettier formatting
                   command: |
-                      npm run prettier:verify
+                      #npm run prettier:verify
     lint_lwc:
         # This lints Lightning Web Components.
         <<: *defaults
