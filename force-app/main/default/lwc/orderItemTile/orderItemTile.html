@@ -19,6 +19,14 @@
         <div class="form slds-align_absolute-center">
             <lightning-input
                 onchange={handleFormChange}
+                value={orderItem.Name}
+                data-field-name="Name"
+                label="名前"
+                type="Text"
+                class="price"
+            ></lightning-input>
+            <lightning-input
+                onchange={handleFormChange}
                 value={orderItem.Price__c}
                 data-field-name="Price__c"
                 label="価格"
