@@ -1,0 +1,40 @@
+<template>
+    <lightning-card title="類似製品" icon-name="standard:link">
+
+        <div class="slds-m-horizontal_medium">
+            <template if:true={searchBarIsVisible}>
+                <lightning-input
+                    label="検索キーワード"
+                    type="text"
+                    onchange={handleSearchKeyChange}
+                    class="search-bar"
+                ></lightning-input>
+            </template>
+
+            <template if:true={books.data}>
+                <template if:true={books.data}>
+                    <template
+                        for:each={books.data}
+                        for:item="book"
+                    >
+                        <c-first-test-lwc
+                            key={book.Id}
+                            book={book}
+                        ></c-first-test-lwc>
+                    </template>
+                </template>
+                <template if:false={books.data.length}>
+                    <c-placeholder
+                        message="類似製品はありません"
+                    ></c-placeholder>
+                </template>
+            </template>
+            <template if:true={books.errors}>
+                <c-inline-message
+                    message="類似製品の取得中にエラーが発生しました"
+                    errors={books.errors}
+                ></c-inline-message>
+            </template>
+        </div>
+    </lightning-card>
+</template>

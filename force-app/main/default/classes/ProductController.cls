@@ -35,18 +35,18 @@ public with sharing class ProductController {
             if (productFilters.categories != null) {
                 categories = productFilters.categories;
                 criteria.add('Category__c IN :categories');
-            }                      
+            }
             if (productFilters.levels != null) {
                 levels = productFilters.levels;
                 criteria.add('Level__c IN :levels');
-            }                      
+            }
             if (productFilters.materials != null) {
                 materials = productFilters.materials;
                 criteria.add('Material__c IN :materials');
             }
             if (criteria.size() > 0) {
                 whereClause = 'WHERE ' + String.join( criteria, ' AND ' );
-            }                      
+            }
         }
         Integer pageSize = ProductController.PAGE_SIZE;
         Integer offset = (pageNumber - 1) * pageSize;
@@ -61,6 +61,26 @@ public with sharing class ProductController {
     @AuraEnabled(Cacheable=true)
     public static Product__c[] getSimilarProducts(Id productId, Id familyId) {
         return [SELECT Id, Name, MSRP__c, Description__c, Category__c, Level__c, Picture_URL__c, Material__c FROM Product__c WHERE Product_Family__c=:familyId AND Id!=:productId];
+    }
+
+    @AuraEnabled(Cacheable=true)
+    public static Book__c[] getBooks(String filters) {
+         String key, whereClause = '';
+         String[] criteria = new String[]{};
+         if (!String.isEmpty(filters)) {
+            Filters bookFilters = (Filters) JSON.deserializeStrict(filters, ProductController.Filters.class);
+             if (!String.isEmpty(bookFilters.searchKey)) {
+                key = '%' + bookFilters.searchKey + '%';
+                criteria.add('Name LIKE :key');
+            }
+            if (criteria.size() > 0) {
+                whereClause = ' WHERE ' + String.join( criteria, ' AND ' );
+            }
+         }
+        //return [SELECT Id, Name, writer__c, Price__c,PictureURL__c FROM Book__c ];
+       System.debug('SELECT Id, Name, writer__c, Price__c,PictureURL__c FROM Book__c' + whereClause);
+       return  Database.query('SELECT Id, Name, writer__c, Price__c,PictureURL__c FROM Book__c' + whereClause);
+
     }
 
 }

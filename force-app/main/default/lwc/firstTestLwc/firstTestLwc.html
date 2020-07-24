@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout vertical-align="center">
+        <lightning-layout-item>
+            <img src={book.PictureURL__c}
+            class="book slds-align_absolute-center"
+            alt="Book book"
+            >
+        </lightning-layout-item>
+        <lightning-layout-item
+            flexibility="grow"
+            class="slds-p-horizontal_small"
+        >
+            <p>{book.Name}</p>
+            <p>
+                <lightning-formatted-number
+                    format-style="currency"
+                    currency-code="JPY"
+                    value={book.Price__c}
+                    class="price"
+                    maximum-fraction-digits="0"
+                ></lightning-formatted-number>
+            </p>
+        </lightning-layout-item>
+        <lightning-layout-item
+            ><lightning-button
+                label="詳細を表示"
+                onclick={handleViewDetailsClick}
+            ></lightning-button
+        ></lightning-layout-item>
+    </lightning-layout>
+</template>
