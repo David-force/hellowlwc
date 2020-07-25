@@ -1,4 +1,4 @@
-import { LightningElement,api } from 'lwc';
+import { LightningElement,api, track } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 import BOOK_OBJECT from '@salesforce/schema/Book__c';
 
